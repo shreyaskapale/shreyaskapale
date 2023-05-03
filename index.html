@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cedarville+Cursive&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="canvas_container"></div>
+<div id="user_panel">
+  <!-- <img src="shreyaskapale.png" style="border-radius: 50%;height: 200px;width: 200px;"> -->
+    <!-- Start Nav Structure -->
+    <button class="cn-button" id="cn-button" >⬤</button>
+    <div class="cn-wrapper" id="cn-wrapper">
+      <ul>
+        <li><a href="" ><span><a href="mailto:kapale.shreyas@gmail.com" class="fa fa-envelope" style="color:black;"></a></span></a></li>
+        <li><a href="/about.html"><span>About</span></a></li>
+        <li><a href="#"><span><a href="https://twitter.com/shreyaskapale?lang=en" class="fa fa-twitter" style="color:black;"></a></span></a></li>
+        <li><a href="#"><span><a href="https://in.linkedin.com/in/shreyas-kapale-82011513a" class="fa fa-linkedin" style="color:black;"></a></span></a></li>
+        <li><a href="#"><span><a  href="https://github.com/shreyaskapale" class="fa fa-github" style="color:black;"></a></span></a></li>
+        <li><a href="#"><span>Blog</span></a></li>
+        <li><a href="#"><span><a href="https://www.instagram.com/shreyaskapale" class="fa fa-instagram" style="color:black;"></a></span></a></li>
+        <li><a href="#"><span><a href="#"  id="close-button" class="fa fa-circle-o" style="color:black;"></a></span></a></li>
+
+        
+
+      </ul>
+    </div>
+    <!-- End of Nav Structure -->
+<!-- /container -->
+<!-- <center><p style="color:white;font-size: 18px;">The diety endures forver</p></center> -->
+
+
+<!-- <button id="fullscr">Go Fullscreen</button> -->
+
+</div>
+
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js'></script><script  src="./script.js"></script>
+<script>
+if(screen.width < 800){
+  const collection = document.getElementsByClassName("fa");
+  for(i = 0; i < collection.length; i++) {
+    collection[i].style.fontSize = '18px';
+  }
+
+}
+
+  (function(){
+
+let button = document.getElementById('cn-button'),
+wrapper = document.getElementById('cn-wrapper');
+
+
+let open = false;
+let closeButton = document.getElementById('close-button')
+closeButton.addEventListener('click', handler, false);
+
+button.addEventListener('click', handler, false);
+
+close-button
+function handler(){
+  if(!open){
+    this.innerHTML = "⬤";
+    classie.add(wrapper, 'opened-nav');
+  }
+  else{
+    this.innerHTML = "◯";
+  classie.remove(wrapper, 'opened-nav');
+  }
+  open = !open;
+}
+function closeWrapper(){
+  classie.remove(wrapper, 'opened-nav');
+}
+
+})();
+/*!
+* classie - class helper functions
+* from bonzo https://github.com/ded/bonzo
+* 
+* classie.has( elem, 'my-class' ) -> true/false
+* classie.add( elem, 'my-new-class' )
+* classie.remove( elem, 'my-unwanted-class' )
+* classie.toggle( elem, 'my-class' )
+*/
+
+/*jshint browser: true, strict: true, undef: true */
+/*global define: false */
+
+( function( window ) {
+
+'use strict';
+
+// class helper functions from bonzo https://github.com/ded/bonzo
+
+function classReg( className ) {
+return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+}
+
+// classList support for class management
+// altho to be fair, the api sucks because it won't accept multiple classes at once
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+hasClass = function( elem, c ) {
+  return elem.classList.contains( c );
+};
+addClass = function( elem, c ) {
+  elem.classList.add( c );
+};
+removeClass = function( elem, c ) {
+  elem.classList.remove( c );
+};
+}
+else {
+hasClass = function( elem, c ) {
+  return classReg( c ).test( elem.className );
+};
+addClass = function( elem, c ) {
+  if ( !hasClass( elem, c ) ) {
+    elem.className = elem.className + ' ' + c;
+  }
+};
+removeClass = function( elem, c ) {
+  elem.className = elem.className.replace( classReg( c ), ' ' );
+};
+}
+
+function toggleClass( elem, c ) {
+var fn = hasClass( elem, c ) ? removeClass : addClass;
+fn( elem, c );
+}
+
+var classie = {
+// full names
+hasClass: hasClass,
+addClass: addClass,
+removeClass: removeClass,
+toggleClass: toggleClass,
+// short names
+has: hasClass,
+add: addClass,
+remove: removeClass,
+toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+// AMD
+define( classie );
+} else {
+// browser global
+window.classie = classie;
+}
+
+})( window );
+// EventListener | @jon_neal | //github.com/jonathantneal/EventListener
+!window.addEventListener && window.Element && (function () {
+  function addToPrototype(name, method) {
+      Window.prototype[name] = HTMLDocument.prototype[name] = Element.prototype[name] = method;
+  }
+
+  var registry = [];
+
+  addToPrototype("addEventListener", function (type, listener) {
+      var target = this;
+
+      registry.unshift({
+          __listener: function (event) {
+              event.currentTarget = target;
+              event.pageX = event.clientX + document.documentElement.scrollLeft;
+              event.pageY = event.clientY + document.documentElement.scrollTop;
+              event.preventDefault = function () { event.returnValue = false };
+              event.relatedTarget = event.fromElement || null;
+              event.stopPropagation = function () { event.cancelBubble = true };
+              event.relatedTarget = event.fromElement || null;
+              event.target = event.srcElement || target;
+              event.timeStamp = +new Date;
+
+              listener.call(target, event);
+          },
+          listener: listener,
+          target: target,
+          type: type
+      });
+
+      this.attachEvent("on" + type, registry[0].__listener);
+  });
+
+  addToPrototype("removeEventListener", function (type, listener) {
+      for (var index = 0, length = registry.length; index < length; ++index) {
+          if (registry[index].target == this && registry[index].type == type && registry[index].listener == listener) {
+              return this.detachEvent("on" + type, registry.splice(index, 1)[0].__listener);
+          }
+      }
+  });
+
+  addToPrototype("dispatchEvent", function (eventObject) {
+      try {
+          return this.fireEvent("on" + eventObject.type, eventObject);
+      } catch (error) {
+          for (var index = 0, length = registry.length; index < length; ++index) {
+              if (registry[index].target == this && registry[index].type == eventObject.type) {
+                  registry[index].call(this, eventObject);
+              }
+          }
+      }
+  });
+})();
+
+
+</script>
+</body>
+</html>
