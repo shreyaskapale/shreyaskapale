@@ -54,7 +54,7 @@ body {
 	border: none;
 	border-radius: 50%;
 	background: none;
-	background-color: rgba(0, 0, 0, 0.0)
+	background-color: rgba(0, 0, 0, 0.0);
 	color: black;
 	text-align: center;
 	font-weight: 700;
@@ -404,3 +404,267 @@ button:hover {
     background: rgba(255, 255, 255, 0.2);
     color: white;
 }
+.request-loader {
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 100%;
+	background: #fff;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+}
+.request-loader span {
+	position: relative;
+	font-size: 72px;
+	top: 5px;
+	left: -5px;
+}
+.request-loader::after {
+	opacity: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	right: 0;
+	bottom: 0;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border: 8px solid white;
+	border-radius: 100%;
+	animation-name: ripple;
+	animation-duration: 3s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+	z-index: -1;
+}
+.request-loader::before {
+	opacity: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	right: 0;
+	bottom: 0;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border: 8px solid white;
+	border-radius: 100%;
+	animation-name: ripple;
+	animation-duration: 3s;
+	animation-delay: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+	z-index: -1;
+}
+@keyframes ripple {
+	from {
+		opacity: 1;
+		transform: scale3d(0.75, 0.75, 1);
+   }
+	to {
+		opacity: 0;
+		transform: scale3d(1.5, 1.5, 1);
+   }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* background: url(./bg0.jpg); */
+    background-position-x: center;
+    background-size: cover;
+}
+span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1)  ;
+    animation:  animate 3s linear infinite;
+}
+span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+@keyframes animate {
+    0%
+    {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70%
+    {
+        opacity: 1;
+
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-1500px);
+        opacity: 0;
+
+    }
+    
+}
+span:nth-child(1){
+    top: 0;
+    right: 0;
+    left:initial;
+    animation-delay:0 ;
+    animation-duration: 1s;
+}
+
+span:nth-child(2){
+    top: 0;
+    right: 80px;
+    left:initial;
+    animation-delay:0.2s;
+    animation-duration: 3s;
+}
+
+span:nth-child(3){
+    top: 80px;
+    right: 0px;
+    left:initial;
+    animation-delay:0.4s ;
+    animation-duration: 2s;
+}
+
+span:nth-child(4){
+    top: 0;
+    right: 180px;
+    left:initial;
+    animation-delay:0.6s;
+    animation-duration: 1.5s;
+}
+
+span:nth-child(5){
+    top: 0;
+    right: 400px;
+    left:initial;
+    animation-delay:0.8s;
+    animation-duration: 2.5s;
+}
+
+span:nth-child(6){
+    top: 0;
+    right: 600px;
+    left:initial;
+    animation-delay:1s ;
+    animation-duration: 3s;
+}
+span:nth-child(7 ){
+    top: 300px;
+    right: 0px;
+    left:initial;
+    animation-delay:1s ;
+    animation-duration: 1.75s;
+}
+
+span:nth-child(8){
+    top: 0px;
+    right: 700px;
+    left:initial;
+    animation-delay:1.4s ;
+    animation-duration: 1.25s;
+}
+
+span:nth-child(9){
+    top: 0px;
+    right: 1000px;
+    left:initial;
+    animation-delay:0.75s ;
+    animation-duration: 2.25s;
+}
+
+span:nth-child(10){
+    top: 0px;
+    right: 1000px;
+    left:initial;
+    animation-delay:2.75s ;
+    animation-duration: 2.25s;
+}
+
+.blurred-box{
+	z-index: 9999;
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	top: calc(50% - 125px);
+	left: calc(50% - 125px);
+	background: inherit;
+	border-radius: 50%;
+	overflow: hidden;
+  }
+  
+  .blurred-box:after{
+   content: '';
+   width: 300px;
+   height: 300px;
+   background: inherit; 
+   position: absolute;
+   left: -25px;
+   right: 0;
+   top: -25px;  
+   bottom: 0;
+   box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+   filter: blur(10px);
+  }
+  
+  
+  /* Form which you dont need */
+  .user-login-box{
+	position: relative;
+	margin-top: 50px;
+	text-align: center;
+	z-index: 1;
+  }
+  .user-login-box > *{
+	display: inline-block;
+	width: 200px;
+  }
+  
+  .user-name{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: white;
+  }
+  
+  input.user-password{
+	width: 120px;
+	height: 18px;
+	opacity: 0.4;
+	border-radius: 2px;
+	padding: 5px 15px;
+	border: 0;
+  }
+
+
+

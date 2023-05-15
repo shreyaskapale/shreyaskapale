@@ -13,25 +13,52 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+ 
 <!-- partial:index.partial.html -->
 <div id="canvas_container"></div>
+<div class="blurred-box">
+  <!--  you dont need the user-login-box html  -->
+  <!--  for demo purposes only and its shit  -->
+  <div class="user-login-box">
+    <div class="user-name" style="font-size: 18px;">Shreyas Kapale</div>
+    <p style="font-size:14px">Welcome to my personal website, tap in the center to explore 🪐 </p>
+    <!-- <input class="user-password" type="text" /> -->
+    <br></br>
+    <button style="width:100px" onclick="closeNotice()">Ok</button>
+  </div>
+  
+</div>
 <div id="user_panel">
+  <section>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    
+  </section>
   <!-- <img src="shreyaskapale.png" style="border-radius: 50%;height: 200px;width: 200px;"> -->
     <!-- Start Nav Structure -->
-    <button class="cn-button" id="cn-button" >⬤</button>
+    <div class="request-loader">
+      <button class="cn-button" id="cn-button" >☝</button>
+      </div>
     <div class="cn-wrapper" id="cn-wrapper">
       <ul>
         <li><a href="" ><span><a href="mailto:kapale.shreyas@gmail.com" class="fa fa-envelope" style="color:black;"></a></span></a></li>
-        <li><a href="/about.html"><span>About</span></a></li>
+        <li><a href="/about.html"><p style="color:black;font-size: 28px;">About&nbsp;</p></a></li>
         <li><a href="#"><span><a href="https://twitter.com/shreyaskapale?lang=en" class="fa fa-twitter" style="color:black;"></a></span></a></li>
         <li><a href="#"><span><a href="https://in.linkedin.com/in/shreyas-kapale-82011513a" class="fa fa-linkedin" style="color:black;"></a></span></a></li>
         <li><a href="#"><span><a  href="https://github.com/shreyaskapale" class="fa fa-github" style="color:black;"></a></span></a></li>
-        <li><a href="https://medium.com/@shreyas.kapale"><span>Blog</span></a></li>
+        <li><a href="#"><p style="color:black;font-size: 28px;">Blog</p></a></li>
         <li><a href="#"><span><a href="https://www.instagram.com/shreyaskapale" class="fa fa-instagram" style="color:black;"></a></span></a></li>
         <li><a href="#"><span><a href="#"  id="close-button" class="fa fa-circle-o" style="color:black;"></a></span></a></li>
 
         
-
       </ul>
     </div>
     <!-- End of Nav Structure -->
@@ -218,6 +245,15 @@ window.classie = classie;
       }
   });
 })();
+
+function closeNotice(){
+  var divsToHide = document.getElementsByClassName("blurred-box"); //divsToHide is an array
+    for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.visibility = "hidden"; // or
+        divsToHide[i].style.display = "none"; // depending on what you're doing
+    }
+
+}
 
 
 </script>
