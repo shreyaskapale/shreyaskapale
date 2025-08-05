@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Shreyas Kapale - AI Engineer, Entrepreneur & Federal AI Policy Advisor | Lyzr AI Founder</title>
     <meta name="title" content="Shreyas Kapale - AI Engineer, Entrepreneur & Federal AI Policy Advisor | Lyzr AI Founder">
@@ -13,10 +13,10 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
     <meta name="bingbot" content="index, follow">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://shreyaskapale.com/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Shreyas Kapale - AI Engineer, Entrepreneur & Federal AI Policy Advisor">
@@ -26,17 +26,17 @@
     <meta property="og:site_name" content="Shreyas Kapale - Portfolio">
     <meta property="profile:first_name" content="Shreyas">
     <meta property="profile:last_name" content="Kapale">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Shreyas Kapale - AI Engineer, Entrepreneur & Federal AI Policy Advisor">
     <meta property="twitter:description" content="Founding Engineer at Lyzr AI, Creator of Jazon ($3M ARR), Federal AI Policy Advisor, 2x Product Hunt winner, AI Researcher targeting NeurIPS/ICML 2025">
     <meta property="twitter:image" content="https://shreyaskapale.com/images/profile.jpeg">
     <meta property="twitter:creator" content="@shreyaskapale">
-    
+
     <!-- LinkedIn -->
     <meta property="linkedin:owner" content="shreyaskapale-82011513a">
-    
+
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#2c3e50">
     <meta name="msapplication-TileColor" content="#2c3e50">
@@ -44,22 +44,22 @@
     <meta name="apple-mobile-web-app-title" content="Shreyas Kapale">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    
+
     <!-- Geo Tags -->
     <meta name="geo.region" content="US-CA">
     <meta name="geo.placename" content="San Francisco, California">
     <meta name="geo.position" content="37.7749;-122.4194">
     <meta name="ICBM" content="37.7749, -122.4194">
-    
+
     <!-- Language and Location -->
     <meta name="language" content="English">
     <meta name="coverage" content="Worldwide">
     <meta name="distribution" content="Global">
     <meta name="rating" content="General">
-    
+
     <!-- Cache Control -->
     <meta http-equiv="Cache-Control" content="max-age=31536000">
-    
+
     <!-- Structured Data - JSON-LD -->
     <script type="application/ld+json">
     {
@@ -537,6 +537,57 @@
             height: 300px;
         }
 
+        /* Robot Evolution Custom Layout */
+        .robot-evolution-row {
+            display: flex;
+            gap: 15px;
+            grid-column: 1 / -1;
+            margin-bottom: 20px;
+        }
+
+        .robot-evolution-card {
+            flex: 0 0 70%;
+            max-width: 70%;
+        }
+
+        .robot-evolution-card .gallery-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            max-height: none;
+        }
+
+        .robot-info-card {
+            flex: 0 0 30%;
+            max-width: 30%;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 250px;
+            position: relative;
+        }
+
+        .video-container-small {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 9/16;
+        }
+
+        .video-container-small iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
         /* Awards Section in Gallery */
         .awards-section {
             margin-top: 50px;
@@ -589,11 +640,11 @@
             .container {
                 flex-direction: column;
             }
-            
+
             .profile-section {
                 flex: none;
             }
-            
+
             .featured-item {
                 grid-column: span 1;
             }
@@ -603,11 +654,11 @@
             .profile-section, .gallery-section {
                 padding: 20px 15px;
             }
-            
+
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             h1 {
                 font-size: 1.8em;
             }
@@ -626,7 +677,7 @@
                 <img class="profile-image" src="images/profile_web.jpg" alt="Shreyas Kapale - AI Engineer, Entrepreneur and Federal AI Policy Advisor portrait photo" itemprop="image"/>
                 <h1 itemprop="name">Shreyas Kapale</h1>
                 <div class="subtitle" itemprop="description"> I ❤️ Physics, Space, AI, distributed systems & building stuff.</div>
-                <div class="sub-subtitle" itemprop="jobTitle">Creator of Lyzr Agent Studio & Jazon, <b class="highlight-2x">2x Top Product Hunt</b>, Recognised by Science Society of India</div>
+                <div class="sub-subtitle" itemprop="jobTitle">Creator of Lyzr Agent Studio, Jazon & CheapGPT <b class="highlight-2x">2x Top Product Hunt</b>, Recognised by Science Society of India</div>
             </header>
 
             <div class="blog-section">
@@ -731,7 +782,7 @@
 
             <div class="section">
                 <h2>Professional Experience</h2>
-                
+
                 <div class="experience-item">
                     <h3>Lyzr AI</h3>
                     <div class="role">Founding Engineer & Lead AI Architect (Aug 2023 - Present)</div>
@@ -761,8 +812,8 @@
         <!-- Right Gallery Section -->
         <section class="gallery-section">
             <header class="gallery-header">
-                <h2>Professional Portfolio Gallery</h2>
-                <p class="gallery-subtitle">Speaking Engagements, Awards, Federal AI Policy Work & Professional Achievements</p>
+                <h2>Gallery</h2>
+                <p class="gallery-subtitle">Speaking Engagements, Professional Achievements and Some Personal Stuff</p>
             </header>
 
             <div class="gallery-grid">
@@ -824,6 +875,34 @@
                         <p>Deep-dive AI implementation workshop for enterprise deployment</p>
                         <span class="gallery-tag">Training</span>
                     </div>
+                </div>
+
+                <!-- Robot Evolution Row -->
+                <div class="robot-evolution-row">
+                    <article class="gallery-item robot-evolution-card" itemscope itemtype="https://schema.org/CreativeWork">
+                        <img class="gallery-image" src="images/my_robot_evolution_from_child_hood_web.jpg" alt="Shreyas Kapale's Robot Evolution from Childhood - Engineering Journey 2012-2018 showcasing Arduino, Raspberry Pi and autonomous robotics projects" itemprop="image"/>
+                        <div class="gallery-overlay">
+                            <h3 itemprop="name">Robotics Evolution (2012-2018)</h3>
+                            <p itemprop="description">My engineering journey from childhood - Arduino microcontrollers, Raspberry Pi computers, autonomous robots, and embedded systems. Building the foundation for AI and robotics expertise.</p>
+                            <span class="gallery-tag">Engineering Journey</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-item robot-info-card" itemscope itemtype="https://schema.org/VideoObject">
+                        <div class="video-container-small">
+                            <iframe
+                                src="https://www.youtube.com/embed/1p18H4oABLg?autoplay=1&mute=1&controls=1&loop=1&playlist=1p18H4oABLg&rel=0&modestbranding=1&playsinline=1"
+                                title="Shreyas Kapale's Robot Evolution Video - Engineering Journey"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="gallery-overlay">
+                            <span class="gallery-tag">Video Timeline</span>
+                        </div>
+                    </article>
                 </div>
 
                 <!-- PyCON India Talk -->
